@@ -36,6 +36,8 @@ void draw(){
 
     if(m != null){
       print(m);
+      text(m, 40, 400);
+      textSize(128);
     }
   }
 }
