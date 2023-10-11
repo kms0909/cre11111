@@ -1,0 +1,20 @@
+아두이노
+
+void setup() {
+  pinMode(13, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop(){
+  int s = analogRead(A0);
+
+  Serial.println(s);
+  
+  if(s < 440) 
+    digitalWrite(13, HIGH);
+  else 
+    digitalWrite(13, LOW);
+  
+  delay(500);
+}
+
