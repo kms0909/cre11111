@@ -18,3 +18,24 @@ void loop(){
   delay(500);
 }
 
+프로세싱
+
+import processing.serial.*;
+Serial p;
+
+void setup(){
+  p = new Serial(this, "COM4", 9600);
+  size(400, 400);
+}
+
+void draw(){
+  if(p.available() > 0){
+    String m = p.readStringUntil('\n');
+
+    if(m != null){
+      print(m);
+    }
+  }
+}
+
+
